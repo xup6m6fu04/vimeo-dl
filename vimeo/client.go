@@ -33,6 +33,7 @@ func NewClient() *Client {
 	client := Client{}
 	client.Client = http.DefaultClient
 	client.UserAgent = "vimeo-dl/" + config.Version
+	client.Referer = "https://www.yes588.com.tw/"
 
 	return &client
 }
@@ -43,7 +44,7 @@ func (c *Client) get(url *url.URL) (*http.Response, error) {
 		return nil, err
 	}
 	req.Header.Set("User-Agent", c.UserAgent)
-	req.Header.Set("Referer", c.UserAgent)
+	req.Header.Set("Referer", c.Referer)
 
 	res, err := c.Client.Do(req)
 	if err != nil {
