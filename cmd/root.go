@@ -29,6 +29,7 @@ import (
 var (
 	input     string
 	userAgent string
+	referer   string
 	videoId   string
 	audioId   string
 	combine   bool
@@ -42,6 +43,10 @@ var rootCmd = &cobra.Command{
 		client := vimeo.NewClient()
 		if len(userAgent) > 0 {
 			client.UserAgent = userAgent
+		}
+
+		if len(referer) > 0 {
+			client.Referer = referer
 		}
 
 		masterJsonUrl, err := url.Parse(input)
@@ -97,6 +102,7 @@ var rootCmd = &cobra.Command{
 func init() {
 	rootCmd.Flags().StringVarP(&input, "input", "i", "", "url for master.json (required)")
 	rootCmd.Flags().StringVarP(&userAgent, "user-agent", "", "", "user-agent for request")
+	rootCmd.Flags().StringVarP(&referer, "referer", "", "", "referer for request")
 	rootCmd.Flags().StringVarP(&videoId, "video-id", "", "", "video id")
 	rootCmd.Flags().StringVarP(&audioId, "audio-id", "", "", "audio id")
 	rootCmd.Flags().BoolVarP(&combine, "combine", "", false, "combine video and audio into a single mp4 (ffmpeg is required)")
