@@ -1,7 +1,7 @@
 vimeo-dl
 ========
 
-[![Go](https://github.com/akiomik/vimeo-dl/actions/workflows/go.yml/badge.svg)](https://github.com/akiomik/vimeo-dl/actions/workflows/go.yml)
+[![Go](https://github.com/xup6m6fu04/vimeo-dl/actions/workflows/go.yml/badge.svg)](https://github.com/xup6m6fu04/vimeo-dl/actions/workflows/go.yml)
 
 A tool to download private videos on vimeo.
 
@@ -62,17 +62,17 @@ Flags:
 
 Currently, Windows, macOS and linux are supported.
 
-- Download the latest release from [the release page](https://github.com/akiomik/vimeo-dl/releases/latest).
+- Download the latest release from [the release page](https://github.com/xup6m6fu04/vimeo-dl/releases/latest).
 - Extract the downloaded `.tar.gz` file.
 
 ### go install
 
 ```sh
 # go <1.6
-go get -u github.com/akiomik/vimeo-dl
+go get -u github.com/xup6m6fu04/vimeo-dl
 
 # go >=1.6
-go install github.com/akiomik/vimeo-dl
+go install github.com/xup6m6fu04/vimeo-dl
 ```
 
 ## Build

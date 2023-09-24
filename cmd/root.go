@@ -21,9 +21,9 @@ import (
 	"os"
 	"os/exec"
 
-	"github.com/akiomik/vimeo-dl/config"
-	"github.com/akiomik/vimeo-dl/vimeo"
 	"github.com/spf13/cobra"
+	"github.com/xup6m6fu04/vimeo-dl/config"
+	"github.com/xup6m6fu04/vimeo-dl/vimeo"
 )
 
 var (

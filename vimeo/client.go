@@ -20,12 +20,13 @@ import (
 	"net/http"
 	"net/url"
 
-	"github.com/akiomik/vimeo-dl/config"
+	"github.com/xup6m6fu04/vimeo-dl/config"
 )
 
 type Client struct {
 	Client    *http.Client
 	UserAgent string
+	Referer   string
 }
 
 func NewClient() *Client {
@@ -42,6 +43,7 @@ func (c *Client) get(url *url.URL) (*http.Response, error) {
 		return nil, err
 	}
 	req.Header.Set("User-Agent", c.UserAgent)
+	req.Header.Set("Referer", c.UserAgent)
 
 	res, err := c.Client.Do(req)
 	if err != nil {
