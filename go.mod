@@ -3,7 +3,6 @@ module github.com/xup6m6fu04/vimeo-dl
 go 1.21
 
 require (
-	github.com/xup6m6fu04/vimeo-dl v0.1.0
 	github.com/spf13/cobra v1.7.0
 )
 
